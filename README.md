@@ -10,7 +10,7 @@ Install Composer in a common location or in your project:
 
 Install via composer:
 
-    composer require --dev instana/instana-php-sdk
+    composer require instana/instana-php-sdk
 
 ## Usage
 
