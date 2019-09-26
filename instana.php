@@ -27,7 +27,7 @@ namespace Instana;
 
 use Exception;
 
-if (!class_exists('Instana\Tracer')) {
+if (false === extension_loaded('instana') && false === class_exists('Instana\Tracer')) {
     /**
      * Class Instana\Tracer
      *
