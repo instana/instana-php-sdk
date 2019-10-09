@@ -11,6 +11,11 @@
       "role": "Developer"
     }
   ],
+  "autoload": {
+    "files": [
+      "instana.php"
+    ]
+  },
   "support": {
     "source": "https://github.com/instana/instana-php-sdk",
     "issues": "https://github.com/instana/instana-php-sdk/issues",
@@ -20,5 +25,3 @@
     "php": ">=5.3"
   }
 }
-
-
