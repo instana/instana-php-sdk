@@ -127,5 +127,5 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
      *
      * @package Instana
      */
-    class InstanaRuntimeException {}
+    class InstanaRuntimeException extends \Exception {}
 }
