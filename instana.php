@@ -38,7 +38,7 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
         /**
          * Tracer constructor.
          */
-        public function __construct() {}
+        public function __construct(){}
 
         /**
          * Creates a new intermediate SDK Span with the name set to $category
@@ -46,15 +46,22 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
          * @param string $category
          * @return Span
          */
-        public function createSpan($category) {}
+        public function createSpan($category){}
+
+        /**
+         * Returns a reference to the root Span
+         *
+         * @return Span
+         */
+        public static function getEntrySpan(){}
 
         /**
          * Logs an exception
          *
-         * @param Exception $e
+         * @param \Exception $e
          * @return void
          */
-        public function logException(Exception $e) {}
+        public function logException(\Exception $e){}
 
         /**
          * Sets the Service Name
@@ -62,7 +69,7 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
          * @param string $serviceName
          * return void
          */
-        public static function setServiceName($serviceName) {}
+        public static function setServiceName($serviceName){}
     }
 
     /**
@@ -82,7 +89,7 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
          *
          * @see Tracer::createSpan()
          */
-        public function __construct() {}
+        public function __construct(){}
 
         /**
          * Annotates the Span with a key and a value
@@ -91,27 +98,28 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
          *
          * @param string $key
          * @param string|int $val
-         * @return void
+         * @throws InstanaRuntimeException when Span was already stopped
          * @throws InstanaRuntimeException when $key is not a string
          * @throws InstanaRuntimeException when $value is not a string or integer
-         * @throws InstanaRuntimeException when Span was already stopped
+         * @return void
          */
-        public function annotate($key, $val) {}
+        public function annotate($key, $val){}
 
         /**
          * Marks the Span as erroneous
          *
-         * @return void
          * @throws InstanaRuntimeException when Span was already stopped
+         * @return void
          */
-        public function markError() {}
+        public function markError(){}
 
         /**
          * Closes the Span
          *
+         * @throws InstanaRuntimeException when Span was not created through Span::__construct
          * @return void
          */
-        public function stop() {}
+        public function stop(){}
     }
 
     /**
