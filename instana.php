@@ -46,14 +46,18 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
          * @param string $category
          * @return Span
          */
-        public function createSpan($category){}
+        public function createSpan($category){
+            return new Span();
+        }
 
         /**
          * Returns a reference to the root Span
          *
          * @return Span
          */
-        public static function getEntrySpan(){}
+        public static function getEntrySpan(){
+            return new Span();
+        }
 
         /**
          * Logs an exception
