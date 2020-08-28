@@ -60,12 +60,12 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
         }
 
         /**
-         * Logs an exception
+         * Logs an exception or throwable
          *
-         * @param \Exception $e
+         * @param Exception|\Throwable $e
          * @return void
          */
-        public function logException(\Exception $e){}
+        public function logException($e){}
 
         /**
          * Sets the Service Name
