@@ -9,6 +9,11 @@
       "name": "Gordon Oheim",
       "email": "gordon.oheim@instana.com",
       "role": "Developer"
+    },
+    {
+      "name": "Andrey Ovcharov",
+      "email": "andrey.ovcharov@instana.com",
+      "role": "Developer"
     }
   ],
   "autoload": {

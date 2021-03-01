@@ -41,12 +41,20 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
         public function __construct(){}
 
         /**
+         * Starts a new SDK Trace, optionally with given Id
+         *
+         * @param string $traceId optional trace Id
+         */
+        public function createNewTrace($traceId) {}
+
+        /**
          * Creates a new intermediate SDK Span with the name set to $category
          *
          * @param string $category
+         * @param int $type - optional span type one of Span::ENTRY, Span::EXIT or Span::LOCAL
          * @return Span
          */
-        public function createSpan($category){
+        public function createSpan($category, $type){
             return new Span();
         }
 
@@ -74,6 +82,11 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
          * return void
          */
         public static function setServiceName($serviceName){}
+
+        /**
+         * Sends collected instrumentation data
+         */
+        public function flush(){}
     }
 
     /**
@@ -85,6 +98,10 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
      */
     class Span
     {
+        const ENTRY = 1;
+        const EXIT = 2;
+        const LOCAL = 3;
+
         /**
          * Span constructor.
          *
