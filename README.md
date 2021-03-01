@@ -18,7 +18,7 @@ Please see our [official documentation for the Instana PHP Tracer][docs] for a u
 
 ## Example
 
-To annotate custom information about a http-endpoint, you can use the 
+To annotate custom information about a http-endpoint, you can use the
 [available Tags for processing][tags].
 
 ```php
@@ -27,7 +27,7 @@ $tracer = new \Instana\Tracer();
 $entry = $tracer->getEntrySpan();
 
 $entry->annotate('http.path_tpl', '/articles/{article}/comments');
-``` 
+```
 
  [docs]: https://docs.instana.io/ecosystem/php/#php-sdk
  [tags]: https://www.instana.com/docs/tracing/custom-best-practices/#processed-tags
