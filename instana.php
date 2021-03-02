@@ -57,13 +57,13 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
         public function createNewTrace($traceId) {}
 
         /**
-         * Creates a new intermediate SDK Span with the name set to $category
+         * Creates a new SDK Span with the name set to $category
          *
          * @param string $category
          * @param int $type - optional span type one of Span::ENTRY, Span::EXIT or Span::LOCAL
          * @return Span
          */
-        public function createSpan($category, $type){
+        public function createSpan($category, $type = Span::LOCAL){
             return new Span();
         }
 
