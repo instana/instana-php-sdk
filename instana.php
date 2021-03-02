@@ -43,6 +43,15 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
         /**
          * Starts a new SDK Trace, optionally with given Id
          *
+         * Starting a new trace will discard any traces started by Instana's AutoTrace
+         *
+         * By default, Instana's AutoTrace will create a trace for you when a request 
+         * is received. This method is only needed if you want to create a trace that 
+         * deviates from the regular PHP lifecycle that starts with RINIT and ends in
+         * RSHUTDOWN.
+         *
+         * If you do not provide a trace Id, it will be created for you.
+         *
          * @param string $traceId optional trace Id
          */
         public function createNewTrace($traceId) {}
