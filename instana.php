@@ -54,7 +54,7 @@ if (false === extension_loaded('instana') && false === class_exists('Instana\Tra
          * @param int $type - optional span type one of Span::ENTRY, Span::EXIT or Span::LOCAL
          * @return Span
          */
-        public function createSpan($category, $type){
+        public function createSpan($category, $type = Span::LOCAL){
             return new Span();
         }
 
