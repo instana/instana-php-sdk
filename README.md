@@ -1,3 +1,9 @@
+
+ **Warning:** 
+Instana PHP SDK is deprecated. One year from today, we will officially end support and declare it End of Life (EOL).
+
+We strongly encourage all SDK users to migrate their applications to the [OpenTelemetry SDK Instana exporter](https://github.com/opentelemetry-php/opentelemetry-exporter-instana). Please refer to our [OTel SDK exporter](https://www.ibm.com/docs/en/instana-observability/1.0.296?topic=php-opentelemetry-exporter) documentation for guidance on the usage process.
+
 # Instana PHP SDK stubs
 
 This repo provide stubs for the [Instana PHP SDK][docs]. You can use the stubs for adding autocompletion to your IDE. In addition, the stubs serve as a no-op fallback in case the Instana PHP SDK is unavailable in your code. The stubs provide no other functionality. The actual Instana PHP SDK is bundled with the Instana PHP Tracing extension.
