@@ -1,8 +1,10 @@
 
- **Warning:** 
+ **Warning:**
+
+
 Instana PHP SDK is deprecated. One year from today June 30,2025 we will officially end support and declare it End of Life (EOL).
 
-We strongly encourage all SDK users to migrate their applications to the [OpenTelemetry SDK Instana exporter](https://github.com/opentelemetry-php/opentelemetry-exporter-instana). Please refer to our [OTel SDK exporter](https://www.ibm.com/docs/en/instana-observability/current?topic=php-opentelemetry-exporter) documentation for guidance on the usage process.
+We strongly encourage all SDK users to migrate their applications to the [OpenTelemetry SDK Instana exporter](https://github.com/instana/opentelemetry-php-exporter). Please refer to our [OTel SDK exporter](https://www.ibm.com/docs/en/instana-observability/current?topic=php-opentelemetry-exporter) documentation for guidance on the usage process.
 
 # Instana PHP SDK stubs
 
